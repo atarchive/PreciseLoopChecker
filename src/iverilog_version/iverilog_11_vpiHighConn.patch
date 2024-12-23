@@ -1,0 +1,41 @@
+diff --git a/vvp/vpi_priv.cc b/vvp/vpi_priv.cc
+index 5f0500f..065ffa2 100644
+--- a/vvp/vpi_priv.cc
++++ b/vvp/vpi_priv.cc
+@@ -1209,6 +1209,24 @@ vpiHandle vpi_handle(PLI_INT32 type, vpiHandle ref)
+ 		  fprintf(stderr, "VPI error: vpi_handle(vpiSysTfCall, "
+ 			  "ref!=0).\n");
+ 		  return 0;
++	    }
++        else if(type == vpiHighConn && vpiPort == ref->get_type_code())
++        {
++            char* pPortName = vpi_get_str(vpiName, ref);
++            vpiHandle portModuleHdl = ref->vpi_handle(vpiModule);
++            vpiHandle netHdl = vpi_handle_by_name(pPortName, portModuleHdl);
++            struct __vpiSignal*rfp = dynamic_cast<__vpiSignal*>(netHdl);
++            vpiHandle parentModuleHdl = portModuleHdl->vpi_handle(vpiModule);
++            vpiHandle parentNetIter = vpi_iterate(vpiNet, parentModuleHdl);
++            vpiHandle parentNetHdl = NULL;
++            while( (parentNetHdl = vpi_scan(parentNetIter)) )
++            {
++                struct __vpiSignal* parentRfp = dynamic_cast<__vpiSignal*>(parentNetHdl);
++                if( rfp->node == parentRfp->node)
++                {
++                    return parentNetHdl;
++                }
++            }
+         }
+ 
+ 	    res = ref->vpi_handle(type);
+diff --git a/vpi_user.h b/vpi_user.h
+index 43e9345..4825369 100644
+--- a/vpi_user.h
++++ b/vpi_user.h
+@@ -301,6 +301,7 @@ typedef struct t_vpi_delay  {
+ #define vpiUdpDefn     66
+ #define vpiUserSystf   67
+ #define vpiNetArray   114
++#define vpiHighConn   76   /* higher connection to port */
+ #define vpiIndex       78
+ #define vpiLeftRange   79
+ #define vpiParent      81

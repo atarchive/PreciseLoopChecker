@@ -1,0 +1,10 @@
+
+This directory includes some testcase of 3-ring logic loop testcase.
+Some of them may be used for the fifth question and be in the hidden cases. 
+These case will cause persistent oscillation.
+More cases will be added later.
+
+To run these cases:
+ 1. source /home/public/env.bash
+ 2. run caseName.v -noopt
+

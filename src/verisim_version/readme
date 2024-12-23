@@ -1,0 +1,4 @@
+- run.sh里，因为使用了github上的minisat和zlib工具，所以使用了-I和-L命令先将C++文件编译成了动态库.so文件，然后再去使用verisim仿真
+- -I和-L命令调用的库都在work里面
+- 运行时输入./run.sh case.v即可
+- result_5.v中使用了一个always块，但是是一个完全可以用二输入门搭建出来的组合逻辑，因为过于繁复故没有实现
