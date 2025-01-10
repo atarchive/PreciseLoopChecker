@@ -1,0 +1,5 @@
+1)
+Loop Signals: pin2,pin7,w1,w11,w12,w13,w2,w21,w22,w23,w3,w4,w5,w6,w7,w8,w9,
+Loop Gates: I1.port1,I2.port1,I2.port2,I3.port1,I4.port1,I5.port1,I6.port1,I7.port1,I7.port2,I8.port1,I9.port1,Ia1.port1,Ia2.port1,Ia3.port1,Ia4.port1,Ib1.port1,Ib2.port1,Ib3.port1,Ib4.port1,
+Loop Conditions: I1.port2=1,I3.port2=1,I4.port2=1,I5.port2=1,I6.port2=1,I8.port2=1,I9.port2=1,Ia1.port2=1,Ia2.port2=1,Ia3.port2=1,Ia4.port2=1,Ib1.port2=1,Ib2.port2=1,Ib3.port2=1,Ib4.port2=1,
+
