@@ -1,8 +1,8 @@
 S_AAA_1.v: 20 ms
-S_ACA_1.v: 13 ms
-S_CCA_1.v: 11 ms
-T_AAA_1.v: 12 ms
-T_ACA_1.v: 12 ms
-T_ACA_2.v: 15 ms
+S_ACA_1.v: 12 ms
+S_CCA_1.v: 14 ms
+T_AAA_1.v: 14 ms
+T_ACA_1.v: 11 ms
+T_ACA_2.v: 16 ms
 T_CCA_1.v: 11 ms
-gate_100_100_20.v: 178 ms
+gate_100_100_20.v: 180 ms

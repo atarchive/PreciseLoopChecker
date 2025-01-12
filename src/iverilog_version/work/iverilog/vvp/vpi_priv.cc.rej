@@ -1,0 +1,27 @@
+--- vvp/vpi_priv.cc
++++ vvp/vpi_priv.cc
+@@ -1209,6 +1209,24 @@ vpiHandle vpi_handle(PLI_INT32 type, vpiHandle ref)
+ 		  fprintf(stderr, "VPI error: vpi_handle(vpiSysTfCall, "
+ 			  "ref!=0).\n");
+ 		  return 0;
++	    }
++        else if(type == vpiHighConn && vpiPort == ref->get_type_code())
++        {
++            char* pPortName = vpi_get_str(vpiName, ref);
++            vpiHandle portModuleHdl = ref->vpi_handle(vpiModule);
++            vpiHandle netHdl = vpi_handle_by_name(pPortName, portModuleHdl);
++            struct __vpiSignal*rfp = dynamic_cast<__vpiSignal*>(netHdl);
++            vpiHandle parentModuleHdl = portModuleHdl->vpi_handle(vpiModule);
++            vpiHandle parentNetIter = vpi_iterate(vpiNet, parentModuleHdl);
++            vpiHandle parentNetHdl = NULL;
++            while( (parentNetHdl = vpi_scan(parentNetIter)) )
++            {
++                struct __vpiSignal* parentRfp = dynamic_cast<__vpiSignal*>(parentNetHdl);
++                if( rfp->node == parentRfp->node)
++                {
++                    return parentNetHdl;
++                }
++            }
+         }
+ 
+ 	    res = ref->vpi_handle(type);
