@@ -43,8 +43,13 @@ project_root
 1. 安装必要的工具：
    - **Icarus Verilog** 或 **VeriSim**(***注:VeriSim是概伦电子的产品，比赛后只能使用iverilog仿真***)。
    - C/C++编译器（支持VPI接口）。
-   
-
+   - autoconf/grep等工具
+     如果发现这些工具没有安装，运行
+     ```bash
+     sudo apt update
+     sudo apt install autoconf
+     ```
+     即可
 2. 运行程序：
    ```bash
    cd src/iverilog_version
