@@ -56,7 +56,7 @@ project_root
    make clean
    make
    ```
-   如果直接运行发现vpi报错，可能是当前配置的iverilog并不支持vpi功能，需要重新安装work目录下的iverilog文件:
+   如果直接运行发现vpi报错"vpi error:vpi_get_str……"，是当前配置的iverilog并不支持vpi功能，需要重新安装work目录下的iverilog文件:
    ```bash
    cd work/iverilog
    sh autoconf.sh
@@ -64,7 +64,7 @@ project_root
    make
    sudo make install
    ```
-   即可正确运行
+   再运行iverilog_version中的make即可
 
 3. 查看结果：
    程序将在 `result` 文件夹中生成分析结果文件，`result`文件夹中各个子文件夹是benchmark中相应的组合逻辑电路的赛题1-4的结果，例如 `result_gate_20_20_5/result_1.txt`是benchmark中`gate_20_20_5.v`的赛题1结果。
