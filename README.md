@@ -44,7 +44,7 @@ project_root
    - **Icarus Verilog** 或 **VeriSim**(***注:VeriSim是概伦电子的产品，比赛后只能使用iverilog仿真***)。
    - C/C++编译器（支持VPI接口）。
    - autoconf/grep等工具
-     如果发现这些工具没有安装，运行
+     如果发现这些工具没有安装，运行(以autoconf为例)
      ```bash
      sudo apt update
      sudo apt install autoconf
