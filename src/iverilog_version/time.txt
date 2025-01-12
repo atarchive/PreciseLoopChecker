@@ -1,0 +1,16 @@
+S_AAA_1.v: 22 ms
+S_ACA_1.v: 11 ms
+S_CCA_1.v: 11 ms
+T_AAA_1.v: 11 ms
+T_ACA_1.v: 11 ms
+T_ACA_2.v: 18 ms
+T_CCA_1.v: 11 ms
+gate_100_100_20.v: 180 ms
+gate_1000_1000_50.v: 26249 ms
+gate_2000_2000_100.v: 68927 ms
+gate_200_200_20.v: 673 ms
+gate_20_20_10.v: 26 ms
+gate_20_20_5.v: 21 ms
+gate_30_30_10.v: 36 ms
+gate_40_40_10.v: 36 ms
+gate_500_500_50.v: 16259 ms

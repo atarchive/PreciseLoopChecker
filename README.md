@@ -43,6 +43,7 @@ project_root
 1. 安装必要的工具：
    - **Icarus Verilog** 或 **VeriSim**(***注:VeriSim是概伦电子的产品，比赛后只能使用iverilog仿真***)。
    - C/C++编译器（支持VPI接口）。
+   
 
 2. 运行程序：
    ```bash

@@ -18,6 +18,7 @@ BENCHMARKS := S_AAA_1.v S_ACA_1.v S_CCA_1.v T_AAA_1.v T_ACA_1.v T_ACA_2.v \
                gate_40_40_10.v gate_500_500_50.v
 
 RESULT_DIR := ../../result
+TIME_FILE := time.txt
 
 # 默认目标
 all: clean compile_vpi run_all
@@ -26,6 +27,7 @@ all: clean compile_vpi run_all
 clean:
 	rm -rf *.vvp *.vpi obj_dir *.o $(VPI).c
 	rm -rf ../../result
+	rm -f $(TIME_FILE)  # 清除旧的时间记录文件
 
 # 编译 VPI 模块
 compile_vpi: 
@@ -37,8 +39,12 @@ run_all: compile_vpi
 	@mkdir -p $(RESULT_DIR)
 	@for case in $(BENCHMARKS); do \
 		echo "Running simulation for $$case..."; \
+		start_time=$$(date +%s%3N);  # 获取开始时间（毫秒级时间戳）\
 		iverilog -s combLogic ../../benchmark/testcase/$$case -o testcase.vvp; \
 		vvp -M. -m$(VPI) testcase.vvp;  \
+		end_time=$$(date +%s%3N);  # 获取结束时间（毫秒级时间戳）\
+		elapsed_time=$$((end_time - start_time));  # 计算运行时间（毫秒）\
+		echo "$$case: $$elapsed_time ms" >> $(TIME_FILE);  # 记录运行时间到 time.txt\
 		echo "Finished simulation for $$case."; \
 		case_name=$$(basename $$case .v); \
 		cp -r result result_$$case_name; \

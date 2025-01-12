@@ -1,0 +1,108 @@
+1)
+Loop Breaker: w_1308_362,
+
+2)
+Loop Breaker: w_1312_969,
+
+3)
+Loop Breaker: w_826_440,
+
+4)
+Loop Breaker: w_722_1622,
+
+5)
+Loop Breaker: w_1078_081,
+
+6)
+Loop Breaker: w_148_1922,
+
+7)
+Loop Breaker: w_1692_769,
+
+8)
+Loop Breaker: w_1288_1604,
+
+9)
+Loop Breaker: w_1275_1436,
+
+10)
+Loop Breaker: w_1132_1123,
+
+11)
+Loop Breaker: w_399_1791,
+
+12)
+Loop Breaker: w_1118_1464,
+
+13)
+Loop Breaker: w_1821_251,
+
+14)
+Loop Breaker: w_110_1612,
+
+15)
+Loop Breaker: w_897_1333,
+
+16)
+Loop Breaker: w_996_1465,
+
+17)
+Loop Breaker: w_1075_1910,
+
+18)
+Loop Breaker: w_1911_1098,
+
+19)
+Loop Breaker: w_1289_456,
+
+20)
+Loop Breaker: w_976_295,
+
+21)
+Loop Breaker: w_894_586,
+
+22)
+Loop Breaker: w_966_462,
+
+23)
+Loop Breaker: w_610_899,
+
+24)
+Loop Breaker: w_1230_966,
+
+25)
+Loop Breaker: w_1449_506,
+
+26)
+Loop Breaker: w_1112_1754,
+
+27)
+Loop Breaker: w_432_726,
+
+28)
+Loop Breaker: w_531_1388,
+
+29)
+Loop Breaker: w_305_023,
+
+30)
+Loop Breaker: w_1298_518,
+
+31)
+Loop Breaker: w_116_1550,
+
+32)
+Loop Breaker: w_811_1656,
+
+33)
+Loop Breaker: w_022_445,
+
+34)
+Loop Breaker: w_102_1259,
+
+35)
+Loop Breaker: w_022_455,
+
+36)
+Loop Breaker: w_299_1760,
+
